@@ -1,0 +1,82 @@
+<div class="form-container">
+  <h3 class="form-title">DEMANDE DE STAGE</h3>
+  <p class="form-subtitle">
+    Cette interface vous permet de créer les demandes de stage.<br>
+    Veuillez éviter d'utiliser les caractères spéciaux comme apostrophe (') dans les formulaires
+  </p>
+
+  <form [formGroup]="demandeStageForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+    <div class="form-grid">
+
+      <div class="form-field">
+        <label>INTITULÉ SUJET</label>
+        <input type="text" formControlName="sujet" />
+      </div>
+
+      <div class="form-field">
+        <label>ENTREPRISE</label>
+        <input type="text" formControlName="entreprise" />
+      </div>
+
+      <div class="form-field">
+        <label>ORGANISME D'ACCUEIL</label>
+        <input type="text" formControlName="organismeAccueil" />
+      </div>
+
+      <div class="form-field">
+        <label>DÉPARTEMENT</label>
+        <input type="text" formControlName="departement" />
+      </div>
+
+      <div class="form-field">
+        <label>RESPONSABLE DIRECT</label>
+        <input type="text" formControlName="responsableDirect" />
+      </div>
+
+      <div class="form-field">
+        <label>FONCTION RESPONSABLE DIRECT</label>
+        <input type="text" formControlName="fonctionResponsableDirect" />
+      </div>
+
+      <div class="form-field">
+        <label>ADRESSE</label>
+        <input type="text" formControlName="adresse" />
+      </div>
+
+      <div class="form-field">
+        <label>FAX</label>
+        <input type="text" formControlName="fax" />
+      </div>
+
+      <div class="form-field">
+        <label>TÉLÉPHONE</label>
+        <input type="text" formControlName="tel" />
+      </div>
+
+      <div class="form-field">
+        <label>EMAIL</label>
+        <input type="email" formControlName="email" />
+      </div>
+
+      <div class="form-field">
+        <label>DATE DE DÉBUT</label>
+        <input type="date" formControlName="dateDebut" />
+      </div>
+
+      <div class="form-field">
+        <label>DATE DE FIN</label>
+        <input type="date" formControlName="dateFin" />
+      </div>
+
+      <div class="form-field full-width">
+        <label>CV</label>
+        <input type="file" (change)="onFileSelected($event)" />
+      </div>
+
+    </div>
+
+    <div class="form-actions">
+      <button type="submit">Soumettre</button>
+    </div>
+  </form>
+</div>
